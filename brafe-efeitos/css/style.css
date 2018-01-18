@@ -1,0 +1,439 @@
+/* reset */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+.menu{
+	/*parte da section*/
+	background: #252525;
+
+}
+
+.menu a{
+	color:white;
+	text-decoration:none;
+
+}
+
+.menu li{
+	list-style:none;
+}
+
+.menu-container{
+	max-width: 920px;
+	padding:15px;
+	margin:0 auto;
+
+}
+.menu-container::after, .menu-container::before{
+	display: table;
+	content:'';
+	clear:both;
+
+}
+.menu-nav{
+	float:right;
+
+}
+
+.menu-nav li{
+	display:inline-block;
+
+}
+
+.menu-nav li a{
+	padding:15px;
+	display:block;
+}
+
+.intro{
+	padding:150px 0px;
+	text-align:center;
+	background:url("../img/bg-intro.jpg")no-repeat center center; /*horizontalmente e verticalmente*/
+	background-size:cover;
+	color:white;
+}
+
+.intro h1{
+	text-transform:uppercase;
+	font-size:3em;
+}
+
+.intro h1::after{
+	display:block;
+	content:'';/* desenho de um retangulo*/
+	width:20px;
+	height:4px;
+	background:white;
+	margin:10px auto;
+	transition: 0.5s width; /*transicao para a troca de tamanho*/
+}
+
+.intro h1:hover::after{
+	width:210px;
+}
+
+.intro p{
+	font-size:1.125em;
+	font-style:italic;
+}
+
+/* sobre */
+
+.sobre{
+	padding:60px 0px;
+}
+.sobre h2{
+	padding-bottom:60px;
+	text-align:center;
+	font-size:2.25em;
+}
+
+.sobre-container{
+	max-width:960px;
+	margin:0 auto;
+}
+.sobre-container::after,
+.sobre-container::before{
+	content:'';
+	display:table;
+	clear:both;
+}
+
+.sobre-item{
+	max-width:460;
+	float:left;
+	margin: 10px 10px auto;
+}
+
+.sobre p{
+	font-size:1.125em; /*em para nao limitar o zoom das letras - acessibilidade*/
+	max-width:460px;
+	line-height:1.4em;
+	margin:20px auto;
+	font-style:italic;
+}
+
+.sobre-item h3{
+	font-size:2.25em;
+	background-color:#252525;
+	width:220px;
+	color:white;
+	text-align:center;
+	font-weight:400;
+	font-style:italic;
+	padding: 5px 0;
+	top:-30px;
+	position:relative; /*posicao relativa a maquina/homem*/
+}
+
+/*produtos*/
+
+.produtos{
+	background: #e7e4d8;
+	padding:60px 0;
+	border-top: 3px solid #d6d3c8; /*linha delimitando a seção*/
+	border-bottom: 3px solid #d6d3c8;
+}
+
+.produtos-container{
+	max-width:960px;
+	margin:0 auto;
+}
+
+.produtos-item{
+	width:300px;
+	margin:0px 10px;
+	float:left;
+}
+
+.produtos-container::after,
+.produtos-container::before{
+	content:'';
+	display:table;
+	clear:both;
+}
+
+.produtos-item h2{
+	text-align: center;
+	font-size:2.25em;
+	margin-bottom:20px;
+}
+
+.produtos-item p{
+	font-size:0.875em;
+}
+
+.produtos-item h2::before{
+	content:'';
+	display:block;
+	width:100px;
+	height:100px;
+	margin:20px auto;
+	background:currentColor;
+	border-radius:50%; /*para desenhar um circulo/elipse a partir de um quadrilátero- como se fosse o grau de afinamento. 50% é o maximo*/
+	border:5px solid #e7e4d8; /*grossura tipo cor*/
+	box-shadow: 0 0 0 5px currentColor; /*eixo x, y (determinam a inclinacao da sombra), blur e grossura da sombra, seguida pela cor */
+}
+
+.produtos-paulista::before{
+	color: #492901;
+}
+
+.produtos-carioca::before{
+	color: #c17139;
+}
+
+.produtos-mineiro::before{
+	color: #d7a54d;
+}
+
+.produtos-btn{
+	display: block;
+	width:180px;
+	text-transform:uppercase;
+	border:3px solid #252525;
+	color: black;
+	text-decoration:none;
+	font-weight:bold; /*ou 700*/
+	font-size:1.125em;
+	text-align:center;
+	padding:17px 0px;
+	margin:20px auto;
+	transition:0.5s box-shadow, 0.5s color; /*transicao suave para a sombra e para a cor*/
+}
+.produtos-btn:hover{
+	color:#e7e4d8;
+	box-shadow: 0 180px 0 0 #252525 inset;
+
+}
+/*locais*/
+
+.locais{
+	padding:36px 0;
+
+}
+
+.locais-item{
+	max-width:1400px;
+	margin-bottom: 36px;
+
+
+}
+
+.locais-item img{
+	width:480px;
+	height:260px;
+	float:left;
+	margin:65px 0px;
+	margin-left:230px;
+
+}
+
+/*.locais-item img::after,
+.locais-item img::before{
+	content:'';
+	display:table;
+	clear:both;
+
+}*/
+
+.locais-item-infos{
+	max-width:360px;
+	margin-left:20px;
+	float:left;
+
+}
+
+
+
+.locais-item h2{
+	padding-top:60px;
+	bottom:20px;
+	width:100px;
+	font-size:2.25em;
+
+}
+
+/*.locais-item h2::after,
+.locais-item h2::before{
+	content:'';
+	display:table;
+	clear:both;
+
+}
+*/
+.locais-item p{
+
+	width: 320px;
+	font-size:1.25em;
+	padding-bottom:30px;
+	/*margin-left:80px;*/
+	/*padding:10px 10px;
+
+*/
+}
+
+.locais-item a{
+	width:180px;
+	padding:10px 20px;
+	text-decoration:none;
+	color:#252525;
+	text-transform:uppercase;
+	border:3px solid #252525;
+	color: black;
+	text-decoration:none;
+	font-weight:bold; /*ou 700*/
+	font-size:1.125em;
+	transition:0.5s box-shadow, 0.5s color; /*transicao suave para a sombra e para a cor*/
+}
+
+.locais-item a:hover{
+	color:white;
+	box-shadow: 0 180px 0 0 #252525 inset;
+
+}
+.locais::after,
+.locais::before{
+	content:'';
+	display:table;
+	clear:both;
+}
+
+/*assine*/
+
+.assine{
+	background:#e7e4d8;
+	/*border-top: 3px solid #d6d3c8;*/
+}
+
+.assine-container{
+
+	max-width:960px;
+	margin:0 auto;
+
+}
+
+.assine-info{
+	float:left;
+	padding:45px 0px;
+}
+
+.assine-info h2{
+	font-size:2.5em;
+	color:#252525;
+	padding-bottom:6px;
+}
+
+.assine-info p{
+	color:#252525;
+	font-size:1.4em;
+	font-style:italic;
+
+}
+
+.assine-email{
+	display:inline-block;
+	width:460px;
+	padding-top:45px;
+	padding-left:30px;
+}
+
+.assine-email label{
+	display:none;
+}
+
+.assine-email input{
+	border: 3px solid #252525;
+	padding:7px 5px;
+	padding-right:50px;
+	background-color:#e7e4d8;
+
+}
+.assine-email input[type="text"]{
+	color:#252525;
+	font-size:1.5em;
+	font-family:Georgia, serif;
+	font-style:italic;
+
+}
+
+.assine-email button{
+
+	width:146px;
+	height:49px;
+	position: relative;
+	left:-6px;
+	top:-1px;
+	border: 3px solid #252525;
+	color: white;
+	background-color: #252525;
+	font-size:1.25em;
+	font-family: Georgia, serif;
+	text-transform:uppercase;
+	transition:0.5s box-shadow, 0.5s color;
+	/*padding-top:7px;*/
+
+}
+
+.assine-email button:hover{
+	color:black;
+	box-shadow: 0 180px 0 0 #e7e4d8 inset;
+}
+
+.assine::after,
+.assine::before{
+	content:'';
+	display:table;
+	clear:both;
+}
+
+.footer{
+	background-color: #d6d4c8;
+
+}
+
+.footer-container{
+	max-width:960;
+	padding:0 auto;
+}
+
+.footer p{
+	float:left;
+	font-family: Georgia, serif;
+	font-size:1.125em;
+	color:#252525;
+	font-weight: lighter;
+	padding:45px 0px;
+	padding-left: 230px;
+}
+
+.footer img{
+	float:right;
+	padding:45px 0px;
+	padding-right:233px;
+
+}
+
+.footer::after,
+.footer::before{
+	content:'';
+	display:table;
+	clear:both;
+}
+
+.anime{
+	opacity:0;
+	transform: translate3d(-100px,0,0);
+	transition: .3s;
+}
+
+.anime-start{
+	opacity: 1;
+	transform:translate3d(0,0,0);
+	transition:.3s
+}
+
+/*ver codepen!*/
